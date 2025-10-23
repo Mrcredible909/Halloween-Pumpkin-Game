@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎃 Pumpkin Somnia Network - Halloween Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎃 Pumpkin Somnia Network</h1>
+            <p>Spooky Halloween Adventure - Find Treasures in Pumpkins!</p>
+        </header>
+
+        <!-- Wallet Connect Section -->
+        <section id="login-section" class="section">
+            <h2>🔗 Connect Wallet</h2>
+            <button id="connect-wallet" class="btn-primary">Connect MetaMask</button>
+            <div id="wallet-info" class="hidden">
+                <p>✅ Connected: <span id="wallet-address"></span></p>
+                <p>Network: <span id="network-info">Somnia Testnet</span></p>
+            </div>
+        </section>
+
+        <!-- Game Section -->
+        <section id="game-section" class="section hidden">
+            <h2>🎮 Mystery Pumpkin Game</h2>
+            <div class="game-stats">
+                <div>Score: <span id="current-score">0</span></div>
+                <div>Attempts: <span id="attempts">0</span>/5</div>
+                <div>High Score: <span id="high-score">0</span></div>
+            </div>
+            
+            <div id="game-board">
+                <div class="pumpkin" id="pumpkin-1">🎃</div>
+                <div class="pumpkin" id="pumpkin-2">🎃</div>
+                <div class="pumpkin" id="pumpkin-3">🎃</div>
+            </div>
+
+            <div class="game-controls">
+                <button id="start-game" class="btn-game">🎮 Start Game</button>
+                <button id="collect-reward" class="btn-game hidden">💰 Collect Reward</button>
+                <button id="submit-score" class="btn-game hidden">📊 Submit to Blockchain</button>
+            </div>
+
+            <div id="game-status">
+                Connect wallet and click "Start Game" to play!
+            </div>
+        </section>
+
+        <!-- Leaderboard -->
+        <section id="leaderboard-section" class="section">
+            <h2>🏆 Leaderboard</h2>
+            <div id="leaderboard">
+                <div class="loading">Loading leaderboard...</div>
+            </div>
+        </section>
+
+        <!-- Contract Info -->
+        <section id="contract-section" class="section">
+            <h2>📝 Smart Contract Info</h2>
+            <p>Contract Address: <span id="contract-address">-</span></p>
+            <p>Your High Score: <span id="user-high-score">0</span></p>
+            <p>Total Games Played: <span id="total-games">0</span></p>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
