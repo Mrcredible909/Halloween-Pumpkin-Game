@@ -11,7 +11,7 @@ class HalloweenGame {
         this.totalGames = 0;
         
         // Contract details - UPDATE THIS AFTER DEPLOYING CONTRACT
-        this.contractAddress = "0x0000000000000000000000000000000000000000";
+        this.contractAddress = "0xaA98C1685D18271FAd6BCEe51C15d25d6aA55B46";
         this.contractABI = [
             {
                 "inputs": [{"internalType": "uint256", "name": "_score", "type": "uint256"}],
